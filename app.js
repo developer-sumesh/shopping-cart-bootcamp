@@ -46,7 +46,7 @@ app.use(express.urlencoded({extended:true}));
 const sessionConfig ={
     secret:'bettersecret',
     unsave: true,
-    resave: false,
+    resave: true,
     saveUninitialized: true,
 }
 
