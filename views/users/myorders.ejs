@@ -4,9 +4,10 @@
 <div class="container" style="margin-top: 5rem;">
   
   <%- include("../partials/flash")%>
-  <%if(!orders){%>
+  <%if(orders){%>
     <h6 class="display-6">You not done any order till now!!!!! please order it now</h6>
-    <div>
+     <a href="/products" class="btn btn-primary btn-lg mt-3 mb-3" tabindex="-1" role="button" aria-disabled="true">Go to products</a>
+    </div>
   <%}else{%>
   <h6 class="display-6">My Orders</h6>
   
