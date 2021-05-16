@@ -11,7 +11,8 @@ router.get('/user/:userId/cart',isLoggedIn,async (req,res)=>{
     }
     catch(e){
         req.flash('error','Unable to add this product');
-        res.render(error);
+        console.log(e.massage);
+        res.render('error');
         // res.send(e.message);
     }
 })
@@ -29,7 +30,7 @@ router.post('/user/:id/cart',isLoggedIn,async(req,res)=>{
     }
     catch(e){
         req.flash('error','Unable to get the cart at this moment');
-        res.redirect(error);
+        res.redirect('error');
     }
 
 })

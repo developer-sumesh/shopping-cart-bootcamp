@@ -7,28 +7,36 @@
         <h4 class="display-4">Sign Up</h4>
         <%- include("../partials/flash") %>
         <div class="mb-3">
-                  <label for="username" class="form-label">Username</label>
-                  <input type="text" class="form-control" id="username" placeholder="Username" name="username" required>
-                  <div class="valid-feedback">
-                    great name
-                  </div>
-                </div>
-                <div class="mb-3">
-                  <label for="email" class="form-label">Email</label>
-                  <input type="email" class="form-control" id="email" placeholder="Email" name="email" required>
-                  <div class="valid-feedback">
-                    email ok 
-                  </div>
-                </div>
-                <div class="mb-3">
-                    <label for="password" class="form-label">password</label>
-                    <input type="password" class="form-control" id="password" placeholder="password" name="password" required>
-                    <div class="valid-feedback">
-                       good password
-                    </div>
-                </div>
-        
-                <button type="submit" class="btn btn-primary">Submit</button>
+          <label for="username" class="form-label">Username</label>
+          <input type="text" class="form-control" id="username" placeholder="Username" name="username" required>
+          <div class="valid-feedback">
+            great name
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Email" name="email" required>
+              <div class="valid-feedback">
+                email ok 
+              </div>
+         </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">password</label>
+          <input type="password" class="form-control" id="password" placeholder="password" name="password" required>
+          <div class="valid-feedback">
+            good password
+          </div>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="type" id="inlineRadio1" value="customer">
+          <label class="form-check-label" for="inlineRadio1">signup as a customer</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="type" id="inlineRadio2" value="seller">
+          <label class="form-check-label" for="inlineRadio2">Signup as a seller</label>
+        </div>
+        <br><br>
+        <button type="submit" class="btn btn-primary">Submit</button>
     </form>             
 </div>
 

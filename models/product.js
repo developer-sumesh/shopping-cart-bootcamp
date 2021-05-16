@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const Review = require('./review');
-
+const User = require('./user');
 const productSchema = new mongoose.Schema({
     name:{
         type:String,
@@ -17,6 +17,10 @@ const productSchema = new mongoose.Schema({
     },
     desc:{
         type:String
+    },
+    addBy:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:'User'
     },
     reviews: [
         {

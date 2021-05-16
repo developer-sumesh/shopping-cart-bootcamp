@@ -12,6 +12,7 @@ const productRoutes = require('./routes/product');
 const authRoute = require('./routes/auth');
 const cartRoute = require('./routes/cart')
 const paymentRoute = require('./routes/payment');
+const userRoutes =  require('./routes/user')
 
 const methodOverride = require('method-override');
 const session = require('express-session');
@@ -80,6 +81,7 @@ app.use(productRoutes);
 app.use(authRoute);
 app.use(cartRoute);
 app.use(paymentRoute);
+app.use(userRoutes);
 
 app.listen(process.env.PORT || 3000,()=>{
     console.log("server has Started at port 3000");

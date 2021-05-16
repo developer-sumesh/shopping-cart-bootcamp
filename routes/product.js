@@ -40,7 +40,7 @@ router.post('/products',isLoggedIn,async(req,res)=>{
 })
 
 // show particular product
-router.get('/products/:id',async(req,res)=>{
+router.get('/products/:id',isLoggedIn,async(req,res)=>{
     try{
         const product=await Product.findById(req.params.id).populate('reviews');
         console.log(product);

@@ -13,17 +13,20 @@
                   <h5 class="card-title"><%= product.name %></h5>
                   <h5 class="card-title">&#8377; <%= product.price %></h5>
                   <p class="card-text"><%= product.desc %></p>
-                  <a href="#" class="btn btn-success">Buy</a>
-                  
-                  <a href="/products/<%= product._id %>/edit" class="btn btn-warning">Edit</a>
+                  <!-- <a href="#" class="btn btn-success">Buy</a> -->
                   <div class="mb-3 mt-3">
                     <form action="/user/<%= product._id %>/cart" method="post">
-                    <button class="btn btn-secondary">Add to cart</button>
-                  </form>
+                    <button class="btn btn-secondary">Add to cart</button> 
+                    </form>
                   </div>
-                  <form action="/products/<%= product._id %>?_method=DELETE" method="post">
-                        <button class="btn btn-danger">DELETE</button>
+                  <% if(String(currentUser._id) === String(product.addBy)){ %> 
+                  <a href="/products/<%= product._id %>/edit" class="btn btn-warning">Edit</a>
+                  <% } %> 
+                  <% if(String(currentUser._id) === String(product.addBy)){ %> 
+                  <form action="/products/<%= product._id %>?_method=DELETE" method="post" style="display: inline;">
+                        <button class="btn btn-danger ">DELETE</button>
                   </form>
+                  <% } %> 
                 </div>
             </div>
         </div>
