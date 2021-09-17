@@ -32,7 +32,7 @@ router.post('/products',isLoggedIn,async(req,res)=>{
         req.flash('success','Product Created Sucessfully');
         res.redirect('/products');
         }
-        else res.redirect('/product/new')
+        else res.redirect('/products/new')
     }
     catch(e){
         console.log(e.message);
