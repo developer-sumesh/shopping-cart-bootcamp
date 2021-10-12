@@ -27,16 +27,12 @@ router.get('/products/new',isLoggedIn,(req,res)=>{
 router.post('/products',isLoggedIn,async(req,res)=>{
     // console.log(req.body.product)
     try{
-        if(req.product[price]>100){
-            console.log(req.product)
+        console.log(req.product)
         await Product.create(req.body.product);
         req.flash('success','Product Created Sucessfully');
         res.redirect('/products');
-        }
-        else {
-            console.log(req.product)
-            res.redirect('/products/new');
-        }
+        console.log(req.product)
+        res.redirect('/products/new');
     }
     catch(e){
         console.log(e.message);
